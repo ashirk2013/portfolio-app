@@ -5,9 +5,11 @@ import axios from 'axios'
 
 function App() {
   const [message, setMessage] = useState();
+  const url = process.env.REACT_APP_ENDPOINT_URL + '/api';
+  console.log(url);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api')
+    axios.get(url)
     .then(response => {
       console.log("SUCCESS", response);
       setMessage(response);
