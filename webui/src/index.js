@@ -1,36 +1,24 @@
-import React, { Component} from 'react';
+import { ColorModeScript } from '@chakra-ui/react';
+import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
-
-// Create Import File
-import "./index.scss";
-import PageScrollTop from "./component/PageScrollTop";
-import PortfolioHome from "./home/PortfolioHome";
-
 import App from './App';
+import reportWebVitals from './reportWebVitals';
+import * as serviceWorker from './serviceWorker';
 
-class Root extends Component {
-  render() {
-    return (
-      <BrowserRouter basename={"/"}>
-        <PageScrollTop>
-          <Switch>
-            <Route
-              exact
-              path={`${process.env.PUBLIC_URL}/portfolio-home`}
-              component={PortfolioHome}
-            />
+ReactDOM.render(
+  <StrictMode>
+    <ColorModeScript />
+    <App />
+  </StrictMode>,
+  document.getElementById('root')
+);
 
-            <Route
-              path={`${process.env.PUBLIC_URL}/404`}
-              component={error404}
-            />
-            <Route component={error404} />
-          </Switch>
-        </PageScrollTop>
-      </BrowserRouter>
-    );
-  }
-}
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://cra.link/PWA
+serviceWorker.unregister();
 
-ReactDOM.render(<Root />, document.getElementById("root"));
-serviceWorker.register();
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();

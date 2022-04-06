@@ -1,37 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
-import React, { useEffect, useState } from 'react';
-import axios from 'axios'
+import React from 'react';
+import {
+  ChakraProvider,
+  Box,
+  Text,
+  Link,
+  VStack,
+  Code,
+  Grid,
+  theme,
+} from '@chakra-ui/react';
+import { ColorModeSwitcher } from './ColorModeSwitcher';
+import { Logo } from './Logo';
 
 function App() {
-  const [message, setMessage] = useState();
-  const url = process.env.REACT_APP_ENDPOINT_URL + '/api';
-  console.log(url);
-
-  useEffect(() => {
-    axios.get(url)
-    .then(response => {
-      console.log("SUCCESS", response);
-      setMessage(response);
-    }).catch(err => {
-      console.log(err);
-    });
-  },[])
-
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          React + Flask Tutorial
-        </p>
-        <div>{message?.status === 200 ? 
-          <h3>{message.data.message}</h3>
-          :
-          <h3>LOADING...</h3>}
-        </div>
-      </header>
-    </div>
+    <ChakraProvider theme={theme}>
+      <Box textAlign="center" fontSize="xl">
+        <Grid minH="100vh" p={3}>
+          <ColorModeSwitcher justifySelf="flex-end" />
+          <VStack spacing={8}>
+            <Logo h="40vmin" pointerEvents="none" />
+            <Text>
+              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
+            </Text>
+            <Link
+              color="teal.500"
+              href="https://chakra-ui.com"
+              fontSize="2xl"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Learn Chakra
+            </Link>
+          </VStack>
+        </Grid>
+      </Box>
+    </ChakraProvider>
   );
 }
 
