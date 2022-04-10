@@ -9,6 +9,8 @@ import {
 import React from 'react';
 import { FaSun, FaMoon, FaGithub, FaLinkedin } from 'react-icons/fa';
 import Header from './components/Header';
+import Social from './components/Social';
+import Profile from './components/Profile';
 
 function App() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -29,7 +31,7 @@ function App() {
           onClick={toggleColorMode}
         ></IconButton>
         <IconButton
-          aria-labe="Github Icon"
+          aria-label="Github Icon"
           ml={2}
           icon={<FaGithub />}
           isRound="true"
@@ -43,6 +45,8 @@ function App() {
         ></IconButton>
       </Flex>
       <Header />
+      <Social />
+      <Profile />
     </VStack>
   );
 }

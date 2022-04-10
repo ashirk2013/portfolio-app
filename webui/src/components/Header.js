@@ -5,7 +5,6 @@ import {
   Circle,
   Flex,
   Box,
-  useMediaQuery,
   Text,
   Button,
   Image,
@@ -14,7 +13,6 @@ import {
 const Header = () => {
   const { colorMode } = useColorMode();
   const isDark = colorMode === 'dark';
-  const { isBiggerScreen } = useMediaQuery('(min-width: 600px)');
 
   const OpenLinkedIn = () => {
     window.open('https://www.linkedin.com/in/aaronshirk/');
