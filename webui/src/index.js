@@ -1,15 +1,25 @@
 import { ColorModeScript, ChakraProvider } from '@chakra-ui/react';
 import React, { StrictMode } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
+import Home from './pages/Home';
+import Experience from './pages/Experience';
 
 ReactDOM.render(
   <StrictMode>
     <ChakraProvider>
       <ColorModeScript initialColorMode='light' />
-      <App />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />} >
+            <Route path="home" element={<Home />} />
+            <Route path="experience" element={<Experience />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </ChakraProvider>
   </StrictMode>,
   document.getElementById('root')
