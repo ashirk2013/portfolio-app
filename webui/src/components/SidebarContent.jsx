@@ -3,24 +3,19 @@ import {
   Flex,
   Image,
   CloseButton,
+  Text,
   useColorModeValue,
 } from '@chakra-ui/react';
-import {
-  FiHome,
-  FiTrendingUp,
-  FiCompass,
-  FiStar,
-  FiSettings,
-} from 'react-icons/fi';
+import { FiHome, FiTrendingUp, FiCompass, FiStar } from 'react-icons/fi';
 
 import NavItem from './NavItem';
+import { ColorModeSwitcher } from '../ColorModeSwitcher';
 
 const LinkItems = [
   { name: 'HOME', icon: FiHome },
   { name: 'EXPERIENCE', icon: FiTrendingUp },
   { name: 'CV', icon: FiCompass },
   { name: 'PORTFOLIO', icon: FiStar },
-  { name: 'COLORMODE', icon: FiSettings },
 ];
 
 const SidebarContent = ({ onClose, ...rest }) => {
@@ -50,6 +45,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
           <NavItem key={link.name} icon={link.icon} name={link.name} />
         ))}
       </Box>
+      <ColorModeSwitcher />
     </Box>
   );
 };

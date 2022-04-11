@@ -1,23 +1,49 @@
 import React from 'react';
-import { useColorMode, useColorModeValue, IconButton } from '@chakra-ui/react';
+import { useColorMode, useColorModeValue, Icon, Text, Flex } from '@chakra-ui/react';
 import { FaMoon, FaSun } from 'react-icons/fa';
 
-export const ColorModeSwitcher = props => {
+export const ColorModeSwitcher = ({ icon, ...rest }) => {
   const { toggleColorMode } = useColorMode();
-  const text = useColorModeValue('dark', 'light');
+  const text = useColorModeValue('light', 'dark');
   const SwitchIcon = useColorModeValue(FaMoon, FaSun);
 
   return (
-    <IconButton
-      size="md"
-      fontSize="lg"
-      aria-label={`Switch to ${text} mode`}
-      variant="ghost"
-      color="current"
-      marginLeft="2"
-      onClick={toggleColorMode}
-      icon={<SwitchIcon />}
-      {...props}
-    />
+    <Flex
+      align="center"
+      p="4"
+      mx="4"
+      borderRadius="lg"
+      role="group"
+      cursor="pointer"
+      _hover={{
+        bg: 'orange.500',
+        color: 'white',
+      }}
+    {...rest}
+    >
+      <Icon
+        color={'white'}
+        mr="4"
+        fontSize="16"
+        _groupHover={{
+          color: 'white',
+        }}
+        as={SwitchIcon}
+      />
+      <Text fontWeight={'bold'} color="white">
+        Colormode
+      </Text>
+      {/* <Button
+        size="md"
+        fontSize="lg"
+        aria-label={`Switch to ${text} mode`}
+        variant="outline"
+        color="current"
+        onClick={toggleColorMode}
+        icon={<SwitchIcon />}
+        {...props}
+        Color Mode
+      /> */}
+    </Flex>
   );
 };
