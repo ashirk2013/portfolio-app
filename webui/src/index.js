@@ -5,8 +5,11 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
+
 import Home from './pages/Home';
 import Experience from './pages/Experience';
+import ResumeCV from './pages/ResumeCV';
+import Portfolio from './pages/Portfolio';
 
 ReactDOM.render(
   <StrictMode>
@@ -17,6 +20,8 @@ ReactDOM.render(
           <Route path="/" element={<App />} >
             <Route path="home" element={<Home />} />
             <Route path="experience" element={<Experience />} />
+            <Route path="cv" element={<ResumeCV />} />
+            <Route path="portfolio" element={<Portfolio />} />
           </Route>
         </Routes>
       </BrowserRouter>
