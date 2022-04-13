@@ -8,7 +8,7 @@ import {
 } from '@chakra-ui/react';
 import { Outlet } from 'react-router-dom';
 
-import SidebarContent from '../components/SidebarContent';
+import SidebarNav from '../components/SidebarNav';
 import MobileNav from '../components/MobileNav';
 
 
@@ -16,7 +16,7 @@ export default function MainPage() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box minH="100vh" bg={useColorModeValue('gray.100', 'gray.900')}>
-      <SidebarContent
+      <SidebarNav
         onClose={() => onClose}
         display={{ base: 'none', md: 'block' }}
       />
@@ -30,12 +30,12 @@ export default function MainPage() {
         size="full"
       >
         <DrawerContent>
-          <SidebarContent onClose={onClose} />
+          <SidebarNav onClose={onClose} />
         </DrawerContent>
       </Drawer>
       {/* mobilenav */}
       <MobileNav display={{ base: 'flex', md: 'none' }} onOpen={onOpen} />
-      <Box ml={{ base: 0, md: 60 }} p="2">
+      <Box ml={{ base: 0, md: 60 }}>
         <Outlet />
       </Box>
     </Box>

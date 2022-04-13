@@ -6,19 +6,19 @@ import {
   Text,
   useColorModeValue,
 } from '@chakra-ui/react';
-import { FiHome, FiTrendingUp, FiCompass, FiStar } from 'react-icons/fi';
+import { FiUserCheck, FiTrendingUp, FiCompass, FiStar } from 'react-icons/fi';
 
 import NavItem from './NavItem';
 import { ColorModeSwitcher } from '../ColorModeSwitcher';
 
 const LinkItems = [
-  { name: 'HOME', icon: FiHome },
+  { name: 'ABOUT', icon: FiUserCheck },
   { name: 'EXPERIENCE', icon: FiTrendingUp },
   { name: 'CV', icon: FiCompass },
   { name: 'PORTFOLIO', icon: FiStar },
 ];
 
-const SidebarContent = ({ onClose, ...rest }) => {
+const SidebarNav = ({ onClose, ...rest }) => {
   return (
     <Box
       pt={{ base: '0', md: '100' }}
@@ -50,4 +50,4 @@ const SidebarContent = ({ onClose, ...rest }) => {
   );
 };
 
-export default SidebarContent;
+export default SidebarNav;

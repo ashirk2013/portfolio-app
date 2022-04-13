@@ -11,9 +11,9 @@ import {
 } from '@chakra-ui/react';
 import { FaChevronRight } from 'react-icons/fa';
 
-const Home = () => {
+const About = () => {
   return (
-    <Container minH={'100vh'} maxW={'5xl'} bg={'white'}>
+    <Container minH={'100vh'} maxW={'100%'} bg={'white'}>
       <Stack spacing={4}>
         <Box border={'1px'} align="flex-start" justify={'center'} mt={'10rem'}>
           <Heading size={'4xl'} textTransform={'uppercase'}>
@@ -111,4 +111,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default About;

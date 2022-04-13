@@ -6,7 +6,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
 
-import Home from './pages/Home';
+import About from './pages/About';
 import Experience from './pages/Experience';
 import ResumeCV from './pages/ResumeCV';
 import Portfolio from './pages/Portfolio';
@@ -20,7 +20,8 @@ root.render(
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<App />} >
-            <Route path="home" element={<Home />} />
+            <Route index element={<About />} />
+            <Route path="about" element={<About />} />
             <Route path="experience" element={<Experience />} />
             <Route path="cv" element={<ResumeCV />} />
             <Route path="portfolio" element={<Portfolio />} />
