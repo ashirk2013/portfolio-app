@@ -1,7 +1,7 @@
 import { ColorModeScript, ChakraProvider } from '@chakra-ui/react';
 import React, { StrictMode } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
@@ -11,7 +11,9 @@ import Experience from './pages/Experience';
 import ResumeCV from './pages/ResumeCV';
 import Portfolio from './pages/Portfolio';
 
-ReactDOM.render(
+const root =  createRoot(document.getElementById('root'));
+
+root.render(
   <StrictMode>
     <ChakraProvider>
       <ColorModeScript initialColorMode='light' />
@@ -26,8 +28,7 @@ ReactDOM.render(
         </Routes>
       </BrowserRouter>
     </ChakraProvider>
-  </StrictMode>,
-  document.getElementById('root')
+  </StrictMode>
 );
 
 // If you want your app to work offline and load faster, you can change

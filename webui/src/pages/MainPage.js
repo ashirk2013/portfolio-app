@@ -8,11 +8,11 @@ import {
 } from '@chakra-ui/react';
 import { Outlet } from 'react-router-dom';
 
-import SidebarContent from './SidebarContent';
-import MobileNav from './MobileNav';
+import SidebarContent from '../components/SidebarContent';
+import MobileNav from '../components/MobileNav';
 
 
-export default function SimpleSidebar() {
+export default function MainPage() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box minH="100vh" bg={useColorModeValue('gray.100', 'gray.900')}>
