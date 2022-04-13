@@ -3,7 +3,6 @@ import {
   Flex,
   Image,
   CloseButton,
-  Text,
   useColorModeValue,
 } from '@chakra-ui/react';
 import { FiUserCheck, FiTrendingUp, FiCompass, FiStar } from 'react-icons/fi';
@@ -32,10 +31,11 @@ const SidebarNav = ({ onClose, ...rest }) => {
     >
       <Flex h="40" alignItems="center" mx="8" justifyContent={'space-between'}>
         <Image
-          backgroundColor="transparent"
-          boxShadow={'lg'}
-          borderRadius="full"
-          boxSize={130}
+          borderRadius={'100%'}
+          borderStyle="solid"
+          borderWidth={'0.5rem'}
+          borderColor={'whiteAlpha.400'}
+          boxSize={'160px'}
           src="https://media-exp1.licdn.com/dms/image/C4D03AQHZezaKSbrtyA/profile-displayphoto-shrink_800_800/0/1561480175086?e=1654732800&v=beta&t=Smh63QLaJifoeTLT_s78fy2002KiKbW6EWb4zqESzBY"
         />
         <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
