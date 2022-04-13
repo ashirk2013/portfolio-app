@@ -3,7 +3,7 @@ import {
   Container,
   HStack,
   Heading,
-  IconButton,
+  Button,
   Link,
   List,
   ListItem,
@@ -20,9 +20,9 @@ import {
 } from 'react-icons/fi';
 import { FaGithub, FaLinkedin, FaDatabase, FaGit } from 'react-icons/fa';
 
-const SocialButton = ({ icon, label, href }) => {
-  return <IconButton aria-label={label} as={'a'} href={href} icon={icon} />;
-};
+// const SocialButton = ({ icon, label, href }) => {
+//   return <IconButton aria-label={label} as={'a'} href={href} icon={icon} />;
+// };
 
 const About = () => {
   return (
@@ -120,35 +120,34 @@ const About = () => {
             </ListItem>
           </List>
         </Box>
-        <HStack align={'center'} spacing={10} border={'1px'}>
-          <IconButton
-            aria-label={'GitHub'}
-            size={'md'}
-            href={'https://github.com/ashirk2013'}
-            icon={<FaGithub />}
-            isRound={true}
-            bg={useColorModeValue('blackAlpha.300', 'whiteAlpha.300')}
-            external
-          />
-          <IconButton
-            aria-label={'GitHub'}
-            size={'md'}
-            href={'https://github.com/ashirk2013'}
-            icon={<FaLinkedin />}
-            isRound={true}
-            bg={useColorModeValue('blackAlpha.300', 'whiteAlpha.300')}
-            external
-          />
-          <IconButton
+        <HStack align={'center'} spacing={10}>
+          <Button
+            leftIcon={<FaGithub />}
             as={'a'}
-            aria-label={'GitHub'}
-            size={'md'}
             href={'https://github.com/ashirk2013'}
-            icon={<FaDatabase />}
-            isRound={true}
-            bg={useColorModeValue('blackAlpha.300', 'whiteAlpha.300')}
-            isExternal
-          />
+            target={'_blank'}
+            colorScheme={'gray'}
+          >
+            Github
+          </Button>
+          <Button
+            leftIcon={<FaLinkedin />}
+            as={'a'}
+            href={'https://www.linkedin.com/in/aaronshirk/'}
+            target={'_blank'}
+            colorScheme={'gray'}
+          >
+            LinkedIn
+          </Button>
+          <Button
+            leftIcon={<FaDatabase />}
+            as={'a'}
+            href={'https://www.datacamp.com/profile/aaronshirk'}
+            target={'_blank'}
+            colorScheme={'gray'}
+          >
+            DataCamp
+          </Button>
         </HStack>
       </Stack>
     </Container>
