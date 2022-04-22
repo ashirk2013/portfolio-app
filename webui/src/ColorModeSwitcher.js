@@ -1,5 +1,11 @@
 import React from 'react';
-import { useColorMode, useColorModeValue, Icon, Text, Flex } from '@chakra-ui/react';
+import {
+  useColorMode,
+  useColorModeValue,
+  Icon,
+  Text,
+  Flex,
+} from '@chakra-ui/react';
 import { FaMoon, FaSun } from 'react-icons/fa';
 
 export const ColorModeSwitcher = ({ icon, ...rest }) => {
@@ -19,18 +25,10 @@ export const ColorModeSwitcher = ({ icon, ...rest }) => {
         bg: 'orange.500',
         color: 'white',
       }}
-    {...rest}
+      {...rest}
     >
-      <Icon
-        color={'white'}
-        mr="4"
-        fontSize="16"
-        _groupHover={{
-          color: 'white',
-        }}
-        as={SwitchIcon}
-      />
-      <Text fontWeight={'bold'} color="white">
+      <Icon color={'gray.700'} mr="4" fontSize="16" as={SwitchIcon} />
+      <Text fontWeight={'bold'} color="gray.700">
         Colormode
       </Text>
       {/* <Button

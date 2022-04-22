@@ -12,13 +12,8 @@ import {
   Text,
   useColorModeValue,
 } from '@chakra-ui/react';
-import {
-  FiChevronRight,
-  FiGithub,
-  FiLinkedin,
-  FiDatabase,
-} from 'react-icons/fi';
-import { FaGithub, FaLinkedin, FaDatabase, FaGit } from 'react-icons/fa';
+import { FiChevronRight } from 'react-icons/fi';
+import { FaGithub, FaLinkedin, FaDatabase } from 'react-icons/fa';
 
 // const SocialButton = ({ icon, label, href }) => {
 //   return <IconButton aria-label={label} as={'a'} href={href} icon={icon} />;
@@ -120,7 +115,7 @@ const About = () => {
             </ListItem>
           </List>
         </Box>
-        <HStack align={'center'} spacing={10}>
+        <HStack pb={5} border={'1px'} align={'center'} spacing={10}>
           <Button
             leftIcon={<FaGithub />}
             as={'a'}
