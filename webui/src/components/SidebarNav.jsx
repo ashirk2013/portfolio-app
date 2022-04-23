@@ -13,7 +13,8 @@ import { ColorModeSwitcher } from '../ColorModeSwitcher';
 const LinkItems = [
   { name: 'ABOUT', icon: FiUserCheck },
   { name: 'EXPERIENCE', icon: FiTrendingUp },
-  { name: 'CV', icon: FiCompass },
+  { name: 'EDUCATION', icon: FiCompass },
+  { name: 'SKILLS', icon: FiCompass },
   { name: 'PORTFOLIO', icon: FiStar },
 ];
 

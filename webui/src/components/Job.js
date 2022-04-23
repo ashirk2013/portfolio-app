@@ -22,7 +22,11 @@ const Job = ({ job }) => {
         </UnorderedList>
         <Text color={'gray.600'} fontWeight={'semibold'}></Text>
       </Box>
-      <Box align={'end'} w={{ base: '100%', md: '25%' }}>
+      <Box
+        align={{ base: 'start', md: 'end' }}
+        w={{ base: '100%', md: '25%' }}
+        pt={{ base: '1rem', md: '0rem' }}
+      >
         <Text color={'orange.600'}>{job.dates}</Text>
       </Box>
     </Flex>
