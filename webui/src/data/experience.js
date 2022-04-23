@@ -20,6 +20,16 @@ const experienceData = [
     ],
     dates: 'August 2020 - September 2021',
   },
+  {
+    title: 'Software Developer',
+    client: 'JMT Technology Group',
+    bullets: [
+      'Implement new features for JMT’s core and extensible outdoor licensing and registration platform with Angular 7, Typescript, .Net Framework, C# and SQL Server for the DB backend',
+      'Build out multiple State licensing and registration websites by extending the core platform with State specific requirements, features and enhancements',
+      'Develop and promote high-quality, scalable and secure State websites with modern languages, web frameworks, and tooling within fast-paced Agile teams under tight production deadlines',
+    ],
+    dates: 'September 2019 - August 2020',
+  },
 ];
 
 export default experienceData;
