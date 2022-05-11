@@ -1,28 +1,30 @@
 import { ColorModeScript, ChakraProvider } from '@chakra-ui/react';
 import React, { StrictMode } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import {createRoot} from 'react-dom/client';
+import { createRoot } from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
 
 import About from './pages/About';
 import Experience from './pages/Experience';
+import Education from './pages/Education';
 import ResumeCV from './pages/ResumeCV';
 import Portfolio from './pages/Portfolio';
 
-const root =  createRoot(document.getElementById('root'));
+const root = createRoot(document.getElementById('root'));
 
 root.render(
   <StrictMode>
     <ChakraProvider>
-      <ColorModeScript initialColorMode='light' />
+      <ColorModeScript initialColorMode="light" />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<App />} >
+          <Route path="/" element={<App />}>
             <Route index element={<About />} />
             <Route path="about" element={<About />} />
             <Route path="experience" element={<Experience />} />
+            <Route path="education" element={<Education />} />
             <Route path="cv" element={<ResumeCV />} />
             <Route path="portfolio" element={<Portfolio />} />
           </Route>
