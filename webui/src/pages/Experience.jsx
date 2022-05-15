@@ -13,7 +13,7 @@ const Experience = () => {
       <Stack spacing={5}>
         <Box align="flex-start" justify={'center'} mt={'5rem'}>
           <Heading size={'xl'} textTransform={'uppercase'}>
-            <Text as={'span'} color={'gray.600'}>
+            <Text as={'span'} color={'gray.700'}>
               EXPERIENCE
             </Text>
           </Heading>

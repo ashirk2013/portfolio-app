@@ -8,7 +8,9 @@ const Job = ({ job }) => {
   return (
     <Flex direction={{ base: 'column', md: 'row' }}>
       <Box w={{ base: '100%', md: '75%' }}>
-        <Heading size={'lg'}>{job.title}</Heading>
+        <Heading size={'lg'} textTransform={'uppercase'}>
+          {job.title}
+        </Heading>
         <Text
           textTransform={'uppercase'}
           fontSize={'lg'}
@@ -22,11 +24,7 @@ const Job = ({ job }) => {
         </UnorderedList>
         <Text color={'gray.600'} fontWeight={'semibold'}></Text>
       </Box>
-      <Box
-        align={{ base: 'start', md: 'end' }}
-        w={{ base: '100%', md: '25%' }}
-        pt={{ base: '1rem', md: '0rem' }}
-      >
+      <Box w={{ base: '100%', md: '25%' }} pt={{ base: '1rem', md: '0rem' }}>
         <Text color={'orange.600'}>{job.dates}</Text>
       </Box>
     </Flex>
